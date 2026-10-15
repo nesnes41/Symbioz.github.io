@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UNBLOK — Prévenez l'encrassement des canalisations grâce à un filtre sous évier fabriqué à partir de résidus de fibres de palmier à huile.">
+<title>SYMBIOZ — Campagne UNBLOK | Agence de communication digitale</title>
+<style>
+:root{
+  --ink:#10211b; --muted:#61716a; --cream:#f5f2e9; --paper:#fffdf7;
+  --green:#174c3b; --lime:#c8e86b; --line:#dfe5dc; --orange:#f08a4b;
+  --shadow:0 22px 70px rgba(16,33,27,.12); --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:.3s}
+.nav.scrolled{background:rgba(255,253,247,.9);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;justify-content:center;line-height:0}.logo img{width:clamp(64px,7vw,88px);height:54px;object-fit:contain;display:block}.footer-brand .logo img{width:88px;height:58px}
+.menu{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:700}
+.menu a{opacity:.75}.menu a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:14px 21px;font-weight:800;cursor:pointer;transition:.25s}
+.btn-primary{background:var(--green);color:white;box-shadow:0 10px 25px rgba(23,76,59,.2)}
+.btn-primary:hover{transform:translateY(-2px);background:#103d30}
+.btn-light{background:white;color:var(--ink);border:1px solid var(--line)}
+.hero{padding:145px 0 90px;background:var(--cream);overflow:hidden;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;background:white;border:1px solid var(--line);border-radius:99px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+h1{font-size:clamp(54px,7vw,92px);line-height:.93;letter-spacing:-.065em;max-width:700px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero-copy{font-size:19px;color:var(--muted);max-width:590px;margin:28px 0}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{position:relative;min-height:500px}
+.sink{position:absolute;inset:30px 0 0 30px;background:#d8ddd7;border-radius:50% 50% 34px 34px/42% 42% 25px 25px;box-shadow:inset 0 -25px 50px rgba(0,0,0,.08),var(--shadow);overflow:hidden}
+.sink:before{content:"";position:absolute;left:14%;right:14%;top:17%;height:54%;background:linear-gradient(145deg,#f9faf7,#c7cdc6);border-radius:50%;box-shadow:inset 0 10px 25px rgba(0,0,0,.08)}
+.drain{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#9da59e;border:12px solid #d5d9d3;box-shadow:inset 0 4px 12px rgba(0,0,0,.3)}
+.filter{position:absolute;left:50%;top:57%;transform:translate(-50%,-50%);width:135px;height:92px;border-radius:28px;background:var(--green);box-shadow:0 20px 35px rgba(23,76,59,.3);display:grid;place-items:center;color:white;font-weight:900;letter-spacing:.08em;animation:float 4s ease-in-out infinite}
+.filter:after{content:"UNBLOK";font-size:18px}
+.sticker{position:absolute;right:-15px;top:5px;background:var(--lime);padding:18px 19px;border-radius:50%;font-weight:900;transform:rotate(9deg);box-shadow:var(--shadow)}
+@keyframes float{50%{transform:translate(-50%,-56%)}}
+.marquee{background:var(--green);color:white;padding:17px 0;overflow:hidden;white-space:nowrap}
+.track{display:inline-block;animation:slide 20s linear infinite;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.track span{margin:0 35px;color:var(--lime)}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:55px}
+.kicker{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--green);margin-bottom:12px}
+h2{font-size:clamp(40px,5vw,66px);line-height:.98;letter-spacing:-.055em;max-width:760px}
+.lead{max-width:460px;color:var(--muted);font-size:17px}
+.problem{background:var(--paper)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:32px;background:white;border:1px solid var(--line);border-radius:var(--radius);min-height:250px;transition:.3s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{font-size:34px;margin-bottom:50px}.card h3{font-size:23px;margin-bottom:9px}.card p{color:var(--muted)}
+.solution{background:var(--green);color:white}
+.solution .lead{color:#c6d2cc}.solution .kicker{color:var(--lime)}
+.solution-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.big-stat{font-size:clamp(100px,14vw,190px);font-weight:900;line-height:.8;letter-spacing:-.09em;color:var(--lime)}
+.steps{display:grid;gap:15px}.step{display:grid;grid-template-columns:60px 1fr;align-items:center;padding:24px;border:1px solid rgba(255,255,255,.18);border-radius:20px}.num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:var(--ink);font-weight:900}.step h3{font-size:21px}.step p{color:#b9c9c1;font-size:14px}
+.material{background:#e8eee3}
+.material-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.palm{height:470px;border-radius:40px;background:radial-gradient(circle at 30% 25%,#d6e991 0 8%,transparent 9%),radial-gradient(circle at 70% 70%,#87aa65 0 12%,transparent 13%),linear-gradient(145deg,#244d37,#a7c873);position:relative;overflow:hidden}
+.palm:after{content:"FIBRE\\A DE PALMIER À HUILE";white-space:pre;position:absolute;right:35px;bottom:35px;color:white;font-size:38px;font-weight:900;line-height:.9;text-align:right}
+.checks{display:grid;gap:16px;margin-top:30px}.check{display:flex;gap:13px;align-items:start}.check b{display:block}.check span{color:var(--muted)}
+.audience{background:var(--cream)}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.aud{padding:40px;border-radius:30px;min-height:300px}.aud.home{background:var(--lime)}.aud.pro{background:white;border:1px solid var(--line)}.aud small{font-weight:900;text-transform:uppercase;letter-spacing:.1em}.aud h3{font-size:40px;letter-spacing:-.04em;margin:65px 0 10px}.aud p{color:#43524b}
+.award{padding:90px 0;background:var(--paper)}.award-box{border:1px solid var(--line);border-radius:38px;padding:55px;display:grid;grid-template-columns:1fr .7fr;gap:50px;align-items:center;background:white;box-shadow:var(--shadow)}
+.badge{justify-self:end;width:230px;height:230px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--ink);color:white;font-weight:900;padding:30px;transform:rotate(-7deg)}.badge strong{font-size:28px;color:var(--lime)}
+.cta{background:var(--lime);padding:100px 0}.cta-inner{display:grid;grid-template-columns:1fr .75fr;gap:60px;align-items:center}.cta h2{max-width:700px}.form{background:white;padding:28px;border-radius:28px;box-shadow:var(--shadow)}.form input,.form select{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:13px;margin-bottom:12px;background:#fbfcf8;outline:none}.form input:focus{border-color:var(--green)}.form button{width:100%}.form-note{font-size:11px;color:var(--muted);margin-top:12px}
+footer{background:var(--ink);color:white;padding:55px 0 25px}.footer-grid{display:flex;justify-content:space-between;gap:30px}.footer-brand p{color:#aebdb6;max-width:350px;margin-top:10px}.footer-links{display:flex;gap:30px;color:#c8d2cd;font-size:14px}.bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:45px;padding-top:20px;color:#91a19a;font-size:12px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){
+ .menu a{display:none}.hero-grid,.solution-grid,.material-grid,.cta-inner,.award-box{grid-template-columns:1fr}.hero{padding-top:125px}.hero-art{min-height:390px}.sink{inset:20px 0 0 0}.sticker{right:0}.cards,.audience-grid{grid-template-columns:1fr}.section-head{display:block}.section-head .lead{margin-top:18px}.badge{justify-self:start;width:170px;height:170px}.award-box{padding:32px}.footer-grid,.bottom{display:block}.footer-links{margin-top:25px;flex-wrap:wrap}.bottom p+ p{margin-top:8px}
+}
+
+.instagram-cta{
+  margin: 24px auto 0;
+  max-width: 1180px;
+  padding: 32px;
+  border-radius: 28px;
+  background: #d8ff45;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.instagram-cta h2{margin:6px 0 8px;font-size:clamp(28px,4vw,48px);letter-spacing:-.04em}
+.instagram-cta p{margin:0;max-width:620px}
+@media (max-width:760px){
+  .instagram-cta{flex-direction:column;align-items:flex-start;padding:24px}
+}
+
+
+.product-visuals{background:#f7f9f5}
+.visuals-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:40px}
+.visuals-head .lead{max-width:500px}
+.visual-featured{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;margin-bottom:56px}
+.product-hero-card{background:#e9eef7;border-radius:32px;padding:28px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-hero-card img{display:block;width:100%;max-width:520px;border-radius:18px;cursor:zoom-in;transition:.35s}
+.product-hero-card:hover img{transform:scale(1.02)}
+.visual-text{background:var(--green);color:white;border-radius:32px;padding:44px;display:flex;flex-direction:column;justify-content:center}
+.visual-text .kicker{color:var(--lime)}.visual-text h3{font-size:clamp(28px,3vw,40px);line-height:1.02;letter-spacing:-.04em;margin-bottom:16px}.visual-text p{color:#c6d2cc;font-size:16px}
+.visual-block{margin-top:12px}.visual-block+.visual-block{margin-top:56px}
+.visual-label{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}.visual-label h3{font-size:24px;letter-spacing:-.03em}.visual-label span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.visual-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.visual-gallery.five{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px}
+.visual-gallery.five .visual-card{flex:0 0 clamp(240px,23%,300px);scroll-snap-align:start}
+.visual-card{background:white;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 14px 40px rgba(16,33,27,.07)}
+.visual-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;cursor:zoom-in;transition:.35s}
+.visual-card:hover img{transform:scale(1.03)}
+.visual-card{position:relative}.visual-card img{backface-visibility:hidden}
+.visual-card figcaption{padding:14px 17px;font-size:12px;font-weight:800;color:var(--muted);position:relative;background:white}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(16,33,27,.88);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex}.lightbox img{max-width:min(92vw,820px);max-height:90vh;border-radius:16px;box-shadow:0 30px 90px rgba(0,0,0,.5)}
+@media(max-width:850px){.visual-featured{grid-template-columns:1fr}.visual-gallery{grid-template-columns:1fr}.visual-gallery.five{display:flex}.visuals-head{display:block}.visuals-head .lead{margin-top:18px}.visual-text{padding:32px}}
+
+
+.video-section{background:#10211b;color:#fff}.video-section .kicker{color:#c8e86b}.video-section .lead{color:#c6d2cc}.video-wrap{position:relative;overflow:hidden;border-radius:28px;background:#07110d;box-shadow:0 25px 80px rgba(0,0,0,.25)}.video-wrap video{display:block;width:100%;max-height:650px;background:#07110d}.video-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}.sound-btn{background:#c8e86b;color:#10211b}.schedule{background:#fffdf7}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:20px;background:white}.schedule table{width:100%;border-collapse:collapse;min-width:760px}.schedule th,.schedule td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}.schedule th{background:#174c3b;color:white;font-size:13px;text-transform:uppercase;letter-spacing:.06em}.schedule td:first-child{font-weight:900;white-space:nowrap}.schedule tr:last-child td{border-bottom:0}.channel{display:inline-block;padding:5px 9px;border-radius:99px;background:#e8eee3;font-size:12px;font-weight:800;margin:2px}.schedule-note{font-size:13px;color:var(--muted);margin-top:14px}
+
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#" aria-label="Accueil SYMBIOZ"><img src="assets/symbioz-logo-removebg-preview.png" alt="Logo SYMBIOZ"></a>
+    <div class="menu">
+      <a href="#agence">L’agence</a><a href="#campagne">La campagne</a><a href="#unblok">UNBLOK</a><a href="#video">La vidéo</a><a href="#calendrier">Calendrier</a><a href="#visuels">Créations</a>
+      <a href="https://www.instagram.com/unblokpaas/" target="_blank" rel="noopener noreferrer">Instagram UNBLOK ↗</a>
+            <a href="#contact" class="btn btn-primary">Parler à SYMBIOZ →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow"><i class="dot"></i> SYMBIOZ présente · UNBLOK</div>
+      <h1>Nous faisons émerger les idées qui <em>méritent d’être vues.</em></h1>
+      <p class="hero-copy"><strong>SYMBIOZ</strong> est l’agence de communication digitale qui accompagne et met en avant <strong>UNBLOK</strong>, une innovation pensée pour prévenir l’encrassement des canalisations. Notre mission : transformer une bonne idée en projet visible, compréhensible et désirable.</p>
+      <div class="actions"><a href="#agence" class="btn btn-primary">Découvrir SYMBIOZ ↓</a><a href="#unblok" class="btn btn-light">Découvrir UNBLOK</a></div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="sink"><div class="drain"></div><div class="filter"></div></div>
+      <div class="sticker">STOP<br>BOUCHON<br>↘</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">SYMBIOZ · AGENCE DE COMMUNICATION DIGITALE · UNBLOK <span>✦</span> UNBLOK <span>✦</span> MOINS DE GALÈRES, PLUS DE FLUIDITÉ <span>✦</span> PRÉVENIR PLUTÔT QUE DÉBOUCHER <span>✦</span> UNBLOK <span>✦</span></div></div>
+
+<section class="problem" id="agence">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="kicker">Notre rôle</div><h2>Donner de la visibilité aux innovations utiles.</h2></div><p class="lead">Chez SYMBIOZ, nous créons le lien entre une marque, un produit et son public. UNBLOK est ici présenté comme le projet que nous accompagnons et mettons en valeur.</p></div>
+    <div class="cards">
+      <article class="card reveal"><div class="icon">✦</div><h3>Stratégie</h3><p>Positionner UNBLOK avec un message simple : prévenir plutôt que déboucher.</p></article>
+      <article class="card reveal"><div class="icon">◌</div><h3>Création</h3><p>Construire un univers visuel et éditorial capable de rendre le produit immédiatement compréhensible.</p></article>
+      <article class="card reveal"><div class="icon">↗</div><h3>Activation</h3><p>Déployer la campagne auprès des particuliers et des professionnels de la restauration.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="solution" id="campagne">
+  <div class="container solution-grid">
+    <div class="reveal"><div class="kicker">Notre campagne</div><div class="big-stat">01</div><h2>Faire comprendre UNBLOK en quelques secondes.</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><div><h3>Installez</h3><p>UNBLOK se place sous l'évier.</p></div></div>
+      <div class="step reveal"><div class="num">02</div><div><h3>Raconter</h3><p>Transformer son fonctionnement et son origine en contenu accessible.</p></div></div>
+      <div class="step reveal"><div class="num">03</div><div><h3>Activer</h3><p>Créer l’intérêt puis accompagner le public vers la découverte du produit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="material" id="unblok">
+  <div class="container material-grid">
+    <div class="palm reveal"></div>
+    <div class="reveal"><div class="kicker">Le produit que nous mettons en avant</div><h2>UNBLOK, une innovation portée par une histoire forte.</h2><p class="lead" style="margin-top:22px">UNBLOK est un filtre installé sous l’évier, conçu à partir de déchets issus de la production d’huile de palme. Il retient les graisses et les huiles avant qu’elles n’atteignent les canalisations.</p>
+      <div class="checks">
+        <div class="check"><b>✓</b><div><b>Prévention</b><span>Agir en amont plutôt qu'attendre le bouchon.</span></div></div>
+        <div class="check"><b>✓</b><div><b>Matériau naturel</b><span>Une conception qui valorise une fibre issue de déchets de l'huile de palme.</span></div></div>
+        <div class="check"><b>✓</b><div><b>Accessible</b><span>Une solution pensée pour les foyers comme pour la restauration.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-section" id="video">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">Le film UNBLOK</div>
+        <h2>Une idée utile. Une démonstration qui parle d’elle-même.</h2>
+      </div>
+      <p class="lead">
+        La musique d’ambiance accompagne le film pendant toute sa lecture.
+      </p>
+    </div>
+
+    <div class="video-wrap reveal">
+
+      <video
+        id="unblok-video"
+        controls
+        playsinline
+        preload="metadata"
+        poster="assets/unblok-poster.png">
+
+        <source
+          src="assets/unblok-video-sonorisee.mp4"
+          type="video/mp4">
+
+        Votre navigateur ne prend pas en charge la lecture vidéo.
+      </video>
+
+      <audio id="musiqueFond" preload="auto" loop>
+        <source
+          src="assets/Royalty%20Free%20Music%20-%20Uplifting%20Corporate%20%20Background%20Positive%20Upbeat%20Motivational%20Happy%20Real%20Estate.mp3"
+          type="audio/mpeg">
+      </audio>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const video = document.getElementById("unblok-video");
+  const musique = document.getElementById("musiqueFond");
+
+  // Lecture : lance la musique avec la vidéo
+  video.addEventListener("play", async () => {
+    try {
+      if (Math.abs(musique.currentTime - video.currentTime) > 0.3) {
+        musique.currentTime = video.currentTime;
+      }
+
+      await musique.play();
+    } catch (error) {
+      console.error("Impossible de lancer la musique :", error);
+    }
+  });
+
+  // Pause : arrête aussi la musique
+  video.addEventListener("pause", () => {
+    musique.pause();
+  });
+
+  // Synchronisation si tu avances ou recules
+  video.addEventListener("seeking", () => {
+    if (musique.readyState > 0) {
+      musique.currentTime = video.currentTime;
+    }
+  });
+
+  // Fin du film : arrête et réinitialise la musique
+  video.addEventListener("ended", () => {
+    musique.pause();
+    musique.currentTime = 0;
+  });
+</script>
+
+<section class="product-visuals" id="visuels">
+  <div class="container">
+    <div class="visuals-head reveal">
+      <div><div class="kicker">Les créations du projet</div><h2>Voir UNBLOK, pas seulement en parler.</h2></div>
+      <p class="lead">Le post de lancement et les carrousels Instagram et Facebook imaginés par SYMBIOZ pour annoncer UNBLOK.</p>
+    </div>
+    <div class="visual-featured">
+      <figure class="product-hero-card reveal">
+        <img src="assets/unblok-post-lancement.png" alt="Post de lancement UNBLOK : UNBLOK est enfin disponible, ne débouchez plus, prévenez" loading="lazy">
+      </figure>
+      <div class="visual-text reveal">
+        <div class="kicker">Post de lancement</div>
+        <h3>Ne débouchez plus. Prévenez.</h3>
+        <p>Le visuel principal de la campagne : le produit, la distinction James Dyson Award 2025 et le message clé, réunis dans un seul post.</p>
+      </div>
+    </div>
+    <div class="visual-block">
+      <div class="visual-label reveal"><h3>Carrousel Instagram</h3><span>3 slides</span></div>
+      <div class="visual-gallery">
+        <figure class="visual-card reveal"><img src="assets/unblok-instagram-1.png" alt="Carrousel Instagram, slide 1 : le meilleur bouchon, c'est celui qu'on évite" loading="lazy"><figcaption>Instagram — l'idée</figcaption></figure>
+        <figure class="visual-card reveal"><img src="assets/unblok-instagram-2.png" alt="Carrousel Instagram, slide 2 : une solution pensée pour prévenir, lauréat James Dyson Award 2025" loading="lazy"><figcaption>Instagram — la solution et la preuve</figcaption></figure>
+        <figure class="visual-card reveal"><img src="assets/unblok-instagram-3.png" alt="Carrousel Instagram, slide 3 : UNBLOK est enfin disponible, lien en bio" loading="lazy"><figcaption>Instagram — appel à l'action</figcaption></figure>
+      </div>
+    </div>
+    <div class="visual-block">
+      <div class="visual-label reveal"><h3>Carrousel Facebook</h3><span>5 slides</span></div>
+      <div class="visual-gallery five">
+        <figure class="visual-card"><img src="assets/unblok-facebook-1.png" alt="Carrousel Facebook, slide 1 : UNBLOK est enfin disponible" loading="lazy"><figcaption>Facebook — UNBLOK est enfin disponible</figcaption></figure>
+        <figure class="visual-card"><img src="assets/unblok-facebook-2.png" alt="Carrousel Facebook, slide 2 : le bouchon, prévenez-le à la source" loading="lazy"><figcaption>Facebook — Le bouchon ? Prévenez-le</figcaption></figure>
+        <figure class="visual-card"><img src="assets/unblok-facebook-3.png" alt="Carrousel Facebook, slide 3 : UNBLOK capte, prévient, anticipe" loading="lazy"><figcaption>Facebook — Capte, prévient, anticipe</figcaption></figure>
+        <figure class="visual-card"><img src="assets/unblok-facebook-4.png" alt="Carrousel Facebook, slide 4 : une innovation lauréate du James Dyson Award 2025" loading="lazy"><figcaption>Facebook — Une innovation qui se distingue</figcaption></figure>
+        <figure class="visual-card"><img src="assets/unblok-facebook-5.png" alt="Carrousel Facebook, slide 5 : ne débouchez plus, prévenez, lien en bio" loading="lazy"><figcaption>Facebook — Ne débouchez plus. Prévenez.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="schedule" id="calendrier">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="kicker">Plan de communication · 8 semaines</div><h2>Un calendrier clair, du teasing au lancement.</h2></div><p class="lead">La campagne combine contenus éducatifs, démonstrations, coulisses, preuves sociales et appels à l’action sur les réseaux adaptés à chaque public.</p></div>
+    <div class="table-wrap reveal"><table><thead><tr><th>Semaine</th><th>Canal</th><th>Contenu / action</th><th>Objectif</th></tr></thead><tbody>
+    <tr><td>1 · Teasing</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Visuel mystère « Et si votre évier ne se bouchait plus ? » ; vidéo sur ce qu’on verse dans l’évier ; post sur les coûts en restauration ; ouverture de la liste d’attente.</td><td>Créer la curiosité et faire comprendre le problème.</td></tr>
+    <tr><td>2 · Histoire</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span></td><td>Carrousel sur l’histoire d’UNBLOK et les fibres de palmier à huile ; coulisses de conception ; présentation du parcours au James Dyson Award 2025 ; sondage en story.</td><td>Raconter l’origine du projet et renforcer la crédibilité.</td></tr>
+    <tr><td>3 · Éducation</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Carrousel « 3 gestes pour protéger vos canalisations » ; premier aperçu du filtre ; sondage auprès des restaurateurs ; publicité de notoriété en zone test.</td><td>Expliquer le besoin et montrer la solution.</td></tr>
+    <tr><td>4 · Compte à rebours</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Annonce de la date de lancement ; compte à rebours J-7 puis J-2 ; invitation à une démonstration en cuisine.</td><td>Faire monter l’attente et mobiliser les publics.</td></tr>
+    <tr><td>5 · Lancement</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Reel de lancement ; démonstration complète en 30 secondes ; annonce professionnelle avec lien de demande de devis ; stories depuis la démonstration ; offre de lancement.</td><td>Transformer l’intérêt en inscriptions et premières commandes.</td></tr>
+    <tr><td>6 · Preuve sociale</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Témoignage vidéo d’un restaurateur ; contenu avant/après ; étude de cas d’une cuisine équipée ; photos de l’événement avec lien d’achat.</td><td>Rassurer grâce aux retours et aux démonstrations.</td></tr>
+    <tr><td>7 · Engagement</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span></td><td>Guide d’entretien et de remplacement du filtre ; lancement du challenge #UnblokTonEvier ; publication sur le matériau ; partage des vidéos des participants.</td><td>Encourager la participation et installer les bons gestes.</td></tr>
+    <tr><td>8 · Bilan</td><td><span class="channel">Instagram</span><span class="channel">TikTok</span><span class="channel">LinkedIn</span><span class="channel">Facebook</span></td><td>Compilation des meilleures vidéos ; offre de fin de campagne ; bilan et remerciements ; tirage au sort parmi les participants.</td><td>Prolonger la visibilité et conclure la campagne.</td></tr>
+    </tbody></table></div>
+    <p class="schedule-note">Calendrier synthétisé à partir du document de stratégie fourni. Les dates exactes de publication sont à fixer selon la date réelle de lancement.</p>
+  </div>
+</section>
+
+<section class="audience" id="cibles">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="kicker">Les publics de la campagne</div><h2>SYMBIOZ parle à ceux qui peuvent adopter UNBLOK.</h2></div><p class="lead">Le document distingue une cible principale large et une cible secondaire dans la restauration : SYMBIOZ adapte donc les messages à ces deux publics.</p></div>
+    <div class="audience-grid">
+      <article class="aud home reveal"><small>01 — Particuliers</small><h3>Votre cuisine.<br>Votre tranquillité.</h3><p>Appartement, colocation, cuisine quotidienne : UNBLOK s'adresse à celles et ceux qui veulent protéger leurs canalisations simplement.</p></article>
+      <article class="aud pro reveal"><small>02 — Restauration</small><h3>Votre cuisine pro.<br>Votre efficacité.</h3><p>Food trucks, cafés et petits restaurants : une approche préventive pour les cuisines qui produisent beaucoup de graisses et d'huiles.</p></article>
+    </div>
+  </div>
+</section>
+
+<section style="padding:90px 0;background:#f5f2e9">
+  <div class="container">
+    <div class="award-box reveal" style="grid-template-columns:1fr .8fr">
+      <div>
+        <div class="kicker">L'agence derrière le projet</div>
+        <h2>SYMBIOZ crée le lien entre UNBLOK et son public.</h2>
+        <p class="lead" style="margin-top:22px">Agence de communication digitale fondée par trois étudiants de BUT MMI de l’IUT de Blois, SYMBIOZ fait écho à les fibres de palmier à huile au cœur d’UNBLOK et à notre métier : tisser le lien entre une marque et son public.</p>
+      </div>
+      <div class="badge" style="background:#174c3b">SYMBIOZ<br><strong>COMMUNICATION<br>DIGITALE</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="award">
+  <div class="container">
+    <div class="award-box reveal">
+      <div><div class="kicker">Une innovation récompensée</div><h2>UNBLOK, lauréat du James Dyson Award 2025.</h2><p class="lead" style="margin-top:22px">UNBLOK est une invention de trois étudiants malaisiens de l’Asia Pacific University (APU) of Technology & Innovation : Ong Jing Rou, Natalie Tham et Ng Wen Kai. Ils sont partis de leur propre expérience de canalisations bouchées.</p></div>
+      <div class="badge">JAMES DYSON<br><strong>AWARD<br>2025</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container cta-inner">
+    <div class="reveal"><div class="kicker">Vous avez un projet ?</div><h2>Parlons de votre marque avec SYMBIOZ.</h2><p class="lead" style="margin-top:20px">UNBLOK est notre projet mis en avant ici. Vous souhaitez une campagne, une identité ou une stratégie digitale ? Contactez notre agence.</p></div>
+    <form class="form reveal" onsubmit="submitForm(event)">
+      <input required type="text" placeholder="Votre prénom">
+      <input required type="email" placeholder="Votre adresse e-mail">
+      <select><option>Je suis un particulier</option><option>Je suis un professionnel</option></select>
+      <button class="btn btn-primary" type="submit">Je veux être informé →</button>
+      <p class="form-note" id="form-note">En cliquant, vous rejoignez la liste d'intérêt UNBLOK.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid"><div class="footer-brand"><div class="logo"><img src="assets/symbioz-logo-removebg-preview.png" alt="Logo SYMBIOZ"></div><p>Agence de communication digitale fondée par trois étudiants de BUT MMI de l’IUT de Blois. UNBLOK est l’un des projets que nous accompagnons et mettons en avant.</p></div><div class="footer-links"><a href="#solution">UNBLOK</a><a href="#cibles">Professionnels</a><a href="#contact">Contact</a></div></div>
+    <div class="bottom"><p>© 2026 SYMBIOZ — Agence SYMBIOZ · BUT MMI — IUT de Blois</p><p>Agence de communication digitale · UNBLOK</p></div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
+document.querySelectorAll('.product-visuals img').forEach(img=>img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;lb.classList.add('open')}));
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('form-note').textContent="Merci ! SYMBIOZ a bien reçu votre demande. 🚀";
+  e.target.querySelector('button').textContent="Demande envoyée ✓";
+}
+</script>
+</body>
+</html>
